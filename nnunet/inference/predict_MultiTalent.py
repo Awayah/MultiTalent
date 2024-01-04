@@ -16,6 +16,17 @@
 import argparse
 from copy import deepcopy
 from typing import Tuple, Union, List
+import sys 
+import os
+
+current_file_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.abspath(os.path.join(current_file_dir, '..'))
+grandparent_dir = os.path.abspath(os.path.join(parent_dir, '..'))
+# subfolder_path = os.path.abspath(os.path.join(parent_dir, 'MultiTalent'))
+
+sys.path.append(parent_dir)
+sys.path.append(grandparent_dir)
+# sys.path.append(subfolder_path)
 
 import numpy as np
 from batchgenerators.augmentations.utils import resize_segmentation
